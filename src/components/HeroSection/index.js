@@ -1,7 +1,6 @@
 import React from "react";
 import Section from "./../Section";
 import SectionHeader from "./../SectionHeader";
-import SectionButton from "./../SectionButton";
 import "./styles.scss";
 
 function HeroSection(props) {
