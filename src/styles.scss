@@ -3,8 +3,9 @@
 @font-face {
   font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
-  src: url("./assets/fonts/Inter-Regular.ttf");
+  font-weight: normal;
+  src: url("./assets/fonts/Inter-Regular.ttf") format("truetype"),
+    url("./assets/fonts/Inter-Regular.woff") format("woff");
 }
 
 // COLORS
