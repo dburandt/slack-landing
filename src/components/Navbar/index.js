@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import NavbarContainer from "./../NavbarContainer";
-import { Link, useRouter } from "./../../util/router.js";
-import SectionButton from "./../SectionButton";
+import { Link } from "./../../util/router.js";
 import { useAuth } from "./../../util/auth.js";
 import "./styles.scss";
 
 function Navbar(props) {
   const auth = useAuth();
-  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -65,19 +63,17 @@ function Navbar(props) {
 
             {!auth.user && (
               <>
-                <Link className="navbar-item" to="/signin">
-                  Sign in
-                </Link>
                 <div className="navbar-item">
-                  <SectionButton
-                    parentColor={props.color}
-                    size="normal"
-                    onClick={() => {
-                      router.push("/signup");
-                    }}
-                  >
-                    Sign Up
-                  </SectionButton>
+                  <a href="https://slack.com/oauth/authorize?client_id=579436804787.687842990625&scope=bot,incoming-webhook,files:read,commands">
+                    <img
+                      alt="Add to Slack"
+                      height="40"
+                      width="104"
+                      src="https://platform.slack-edge.com/img/add_to_slack.png"
+                      srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x,
+                https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"
+                    />
+                  </a>
                 </div>
               </>
             )}
