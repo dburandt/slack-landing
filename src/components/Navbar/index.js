@@ -13,8 +13,17 @@ function Navbar(props) {
       <div className="container">
         <div className="navbar-brand">
           <div className="navbar-item">
-            <Link to="/">
-              <img className="image" src={props.logo} alt="Logo" />
+            <Link to="/" className="logo-link">
+              <img className="image" src={props.logo} width="52px" alt="Logo" />
+              <h1
+                className={
+                  "logo-title" +
+                  (props.size ? ` is-${props.size}` : "") +
+                  (props.size === 1 ? " is-size-2-mobile" : "")
+                }
+              >
+                Feedback Bill
+              </h1>
             </Link>
           </div>
           <div
@@ -28,12 +37,12 @@ function Navbar(props) {
         </div>
         <div className={"navbar-menu" + (menuOpen ? " is-active" : "")}>
           <div className="navbar-end">
-            <Link className="navbar-item" to="/about">
-              About
-            </Link>
-            <Link className="navbar-item" to="/pricing">
-              Pricing
-            </Link>
+            <a
+              href="mailto: contactfeedbackbill@gmail.com"
+              className="navbar-item"
+            >
+              Contact
+            </a>
             <Link className="navbar-item" to="/faq">
               FAQ
             </Link>
@@ -64,7 +73,10 @@ function Navbar(props) {
             {!auth.user && (
               <>
                 <div className="navbar-item">
-                  <a href="https://slack.com/oauth/authorize?client_id=579436804787.687842990625&scope=bot,incoming-webhook,files:read,commands">
+                  <a
+                    href="https://slack.com/oauth/authorize?client_id=579436804787.687842990625&scope=bot,incoming-webhook,files:read,commands"
+                    className="slack-navbar-button"
+                  >
                     <img
                       alt="Add to Slack"
                       height="40"
