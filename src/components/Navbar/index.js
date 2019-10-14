@@ -46,6 +46,9 @@ function Navbar(props) {
             <Link className="navbar-item" to="/faq">
               FAQ
             </Link>
+            <Link className="navbar-item" to="/privacy">
+              Privacy
+            </Link>
 
             {!auth.user && (
               <>
