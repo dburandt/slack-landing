@@ -47,29 +47,6 @@ function Navbar(props) {
               FAQ
             </Link>
 
-            {auth.user && (
-              <div className="navbar-item has-dropdown is-hoverable">
-                <Link className="navbar-link" to="/">
-                  Account
-                </Link>
-                <div className="navbar-dropdown is-boxed">
-                  <Link className="navbar-item" to="/dashboard">
-                    Dashboard
-                  </Link>
-                  <Link
-                    className="navbar-item"
-                    to="/signout"
-                    onClick={e => {
-                      e.preventDefault();
-                      auth.signout();
-                    }}
-                  >
-                    Sign out
-                  </Link>
-                </div>
-              </div>
-            )}
-
             {!auth.user && (
               <>
                 <div className="navbar-item">
