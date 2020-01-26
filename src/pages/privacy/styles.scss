@@ -13,3 +13,19 @@
   padding-left: 100px;
   padding-right: 100px;
 }
+
+a {
+  color: #f5ebea;
+  text-decoration: none;
+}
+
+.sub-link {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .priv-container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

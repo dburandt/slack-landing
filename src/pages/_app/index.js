@@ -3,7 +3,7 @@ import HomePage from "./../home";
 import FaqPage from "../faq";
 import PrivacyPage from "../privacy";
 import { Switch, Route, Router } from "./../../util/router.js";
-import analytics from "./../../util/analytics.js";
+// import analytics from "./../../util/analytics.js";
 import { ProvideAuth } from "./../../util/auth.js";
 import "./styles.scss";
 

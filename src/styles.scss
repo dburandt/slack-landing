@@ -1,15 +1,5 @@
 @charset "utf-8";
 
-/*
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: normal;
-  src: url("./assets/fonts/Inter-Regular.ttf") format("truetype"),
-    url("./assets/fonts/Inter-Regular.woff") format("woff");
-}
-*/
-
 // COLORS
 $primary: #00d1b2;
 $info: #209cee;
@@ -20,8 +10,7 @@ $light: #f5f5f5;
 $dark: #363636;
 
 // TEXT
-$text: #4a4a4a;
-$link: #3273dc;
+$text: #f5ebea;
 $body-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   "Helvetica", "Arial", sans-serif;
